@@ -1,0 +1,81 @@
+/* Skórka nowego stylu nakładana na archiwum WordPress (GeneratePress) */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root{
+  --pk-ink:#0a0e13; --pk-ink2:#0f151d; --pk-frost:#f6f3ec; --pk-paper:#fbfaf6;
+  --pk-ice:#3f7397; --pk-ice2:#8fb8d6; --pk-mist:#6b7886; --pk-line:rgba(20,28,38,.14);
+}
+
+/* ── ukryj chrome WordPress/GeneratePress ── */
+#masthead, .site-header#masthead, #site-navigation, .main-navigation, .navigation-branding,
+.site-footer, .footer-bar, .site-info, .inside-site-info, .generate-back-to-top,
+.widget-area, #secondary, .sidebar, aside.widget,
+.masterslider, .master-slider, .ms-container, .ms-slide, div[id^="ms-"],
+.entry-meta, .post-navigation, .nav-links, .pagination, .paging-navigation,
+.comments-area, #comments, .comment-respond, .entry-footer, .sharedaddy, .jp-relatedposts,
+.screen-reader-text, .breadcrumbs, .a2a_kit, .addtoany_share_save_container { display:none !important; }
+
+/* ── baza ── */
+html{ scroll-behavior:smooth; }
+body{ background:var(--pk-frost) !important; color:#222a31 !important;
+  font-family:'Inter',system-ui,-apple-system,sans-serif !important; line-height:1.7 !important; font-size:17px; }
+#page, .site, #content, .site-content, #right-sidebar, #left-sidebar{ background:transparent !important; box-shadow:none !important; }
+#content, .site-content{ padding:0 !important; margin:0 !important; }
+#primary, #main, .site-main, .content-area, .inside-article{
+  max-width:840px !important; width:100% !important; margin:0 auto !important; float:none !important;
+  padding-inline:clamp(1.1rem,4vw,2rem) !important; background:transparent !important; border:0 !important; }
+.grid-container{ max-width:880px !important; }
+article, .inside-article, .type-page, .type-post{ background:transparent !important; box-shadow:none !important; border:0 !important; padding:0 !important; }
+
+/* ── nagłówki ── */
+.entry-header, .page-header{ padding:2.6rem 0 1.2rem !important; border-bottom:1px solid var(--pk-line); margin-bottom:2.2rem !important; }
+.entry-title, .page-title, h1.entry-title{
+  font-family:'Fraunces',Georgia,serif !important; font-weight:400 !important;
+  font-size:clamp(1.9rem,4vw,3rem) !important; line-height:1.08 !important; letter-spacing:-.01em;
+  color:var(--pk-ink) !important; margin:0 !important; }
+.entry-title a{ color:var(--pk-ink) !important; }
+.entry-content h1,.entry-content h2,.entry-content h3,.entry-content h4,
+.entry-summary h2,.entry-summary h3{
+  font-family:'Fraunces',Georgia,serif !important; font-weight:500 !important; color:var(--pk-ink) !important;
+  line-height:1.2 !important; margin:2.2rem 0 .8rem !important; }
+
+/* ── treść ── */
+.entry-content, .entry-summary{ font-size:1.06rem !important; color:#2b343c !important; }
+.entry-content p, .entry-summary p{ margin:0 0 1.25rem !important; }
+.entry-content a, .entry-summary a{ color:var(--pk-ice) !important; text-decoration:underline; text-underline-offset:2px; }
+.entry-content a:hover{ color:var(--pk-ink) !important; }
+.entry-content img{ max-width:100% !important; height:auto !important; border-radius:2px; }
+.entry-content ul,.entry-content ol{ margin:0 0 1.3rem 1.2rem !important; }
+.entry-content li{ margin-bottom:.4rem !important; }
+.entry-content blockquote{ border-left:2px solid var(--pk-ice) !important; padding:.2rem 0 .2rem 1.3rem !important;
+  margin:1.6rem 0 !important; font-family:'Fraunces',serif !important; font-style:italic; color:var(--pk-ink) !important; }
+.entry-content table, table.tablepress{ width:100% !important; border-collapse:collapse !important;
+  font-size:.92rem !important; margin:1.4rem 0 !important; background:var(--pk-paper); }
+.entry-content th, .entry-content td, table.tablepress th, table.tablepress td{
+  border:1px solid var(--pk-line) !important; padding:.55rem .75rem !important; text-align:left !important; vertical-align:top; }
+table.tablepress thead th{ background:var(--pk-ink) !important; color:#fff !important; font-family:'Inter',sans-serif !important; font-weight:600 !important; }
+.entry-content iframe{ max-width:100% !important; }
+.entry-content hr{ border:0; border-top:1px solid var(--pk-line); margin:2rem 0; }
+
+/* miniatury galerii (WP) -> siatka */
+.entry-content img.size-thumbnail, .entry-content img.alignleft, .entry-content img.alignright{
+  float:none !important; display:inline-block !important; width:130px !important; height:130px !important;
+  object-fit:cover !important; margin:3px !important; }
+.entry-content .gallery{ display:grid !important; grid-template-columns:repeat(auto-fill,minmax(130px,1fr)) !important; gap:.5rem !important; }
+.entry-content .gallery-item{ width:auto !important; margin:0 !important; }
+.entry-content .gallery img{ width:100% !important; height:140px !important; object-fit:cover !important; border:0 !important; }
+
+/* ── pasek powrotu (wstrzykiwany) ── */
+#pkp-bar{ position:sticky; top:0; z-index:99999; background:rgba(10,14,19,.96); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+  color:#fff; display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  padding:.7rem clamp(1rem,4vw,2.4rem); font-family:'Inter',sans-serif; font-size:.82rem;
+  border-bottom:1px solid rgba(255,255,255,.12); }
+#pkp-bar a{ color:#fff !important; text-decoration:none !important; }
+#pkp-bar .home{ display:inline-flex; align-items:center; gap:.55rem; font-weight:700; letter-spacing:.12em; font-size:.8rem; }
+#pkp-bar nav a{ margin-left:1.3rem; opacity:.82; font-size:.82rem; }
+#pkp-bar nav a:hover{ opacity:1; color:var(--pk-ice2) !important; }
+#pkp-bar .tag{ color:var(--pk-ice2); font-size:.68rem; letter-spacing:.2em; text-transform:uppercase; }
+@media(max-width:680px){ #pkp-bar nav{ display:none; } }
+
+/* odsuń treść/menu mobilne motywu */
+body{ padding-top:0 !important; }
