@@ -374,6 +374,13 @@ section { position: relative; }
 .back-link { display: inline-flex; gap: .5rem; align-items: center; font-size: .82rem; letter-spacing: .04em; color: var(--ice-deep) !important; margin-top: 2.8rem; border: 0 !important; }
 .back-link:hover { gap: .8rem; }
 .back-link .arr { transition: transform .3s var(--ease); }
+/* tabele (np. wykaz filmów) i embedy w treści */
+.article-body .prose table { width: 100%; border-collapse: collapse; font-size: .9rem; margin: 1.6rem 0; background: var(--paper); display: block; overflow-x: auto; }
+.article-body .prose th, .article-body .prose td { border: 1px solid var(--line-l); padding: .55rem .75rem; text-align: left; vertical-align: top; }
+.article-body .prose thead th, .article-body .prose table th { background: var(--ink); color: #fff; font-weight: 600; }
+.article-body .prose .wp-block-embed, .article-body .prose .wp-block-embed__wrapper { margin: 1.2rem 0; }
+.article-body .prose blockquote.wp-embedded-content { border-left: 2px solid var(--ice-deep); padding: .3rem 0 .3rem 1.1rem; margin: 1rem 0; font-style: normal; font-family: var(--ff-sans); font-size: 1rem; }
+.article-body .prose .wp-caption { max-width: 100% !important; }
 
 /* ---------- responsywność ---------- */
 @media (max-width: 960px) {
